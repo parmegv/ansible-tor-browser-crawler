@@ -1,0 +1,7 @@
+---
+# vars file for ansible-tor-browser-crawler
+apt_dependencies:
+  - python2.7
+  - tcpdump
+  - wireshark
+  - xvfb

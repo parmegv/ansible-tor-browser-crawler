@@ -1,0 +1,6 @@
+---
+# tasks file for ansible-tor-browser-crawler
+- include: clone-repository.yml
+- include: install-apt-deps.yml
+- include: install-python-deps.yml
+- include: set-user-capture-abilities.yml

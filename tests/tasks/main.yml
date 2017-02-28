@@ -1,0 +1,18 @@
+- name: Get details of the directory where the Tor Browser Crawler must be
+  stat: path="{{ dirpath }}/{{ dirname }}"
+  changed_when: false
+  register: test_fact_crawler_cloned
+- name: Check that the Tor Browser Crawler is cloned
+  assert:
+    that:
+      - "test_fact_crawler_cloned.stat.exists == True"
+
+- name: Get details of the directory where the Virtual Environment must be
+  stat: path="{{ virtualenv_path }}"
+  changed_when: false
+  register: test_fact_virtualenv_created
+
+- name: Check that the Virtual Environment exists
+  assert:
+    that:
+      - "test_fact_virtualenv_created.stat.exists == True"
