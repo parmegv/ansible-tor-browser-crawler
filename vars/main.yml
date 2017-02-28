@@ -5,3 +5,5 @@ apt_dependencies:
   - tcpdump
   - wireshark
   - xvfb
+
+path: "{{ dirpath }}/{{ dirname }}" # Path where the crawler will live

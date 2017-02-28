@@ -1,6 +1,9 @@
 ---
 # tasks file for ansible-tor-browser-crawler
+- include: sync-crawler-dir.yml
+  when: local_crawler_src_dir != ""
 - include: clone-repository.yml
+  when: local_crawler_src_dir == ""
 - include: install-apt-deps.yml
 - include: install-python-deps.yml
 - include: set-user-capture-abilities.yml
