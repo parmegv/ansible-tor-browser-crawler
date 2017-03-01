@@ -6,6 +6,6 @@
 
 - name: Install tor-browser-crawler pip dependencies to tb-crawler virtualenv.
   pip:
-    requirements: "{{ dirpath }}/tor-browser-crawler/requirements.txt"
+    requirements: "{{ path }}/requirements.txt"
     virtualenv: "{{ virtualenv_path }}"
     virtualenv_python: "{{ python_executable }}"
