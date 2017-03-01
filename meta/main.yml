@@ -14,5 +14,4 @@ galaxy_info:
 
 dependencies:
   - role: parmegv.ansible-swapon
-  - role: parmegv.ansible-custom-tor
   - role: parmegv.ansible-tor-browser-bundle
