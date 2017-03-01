@@ -3,4 +3,4 @@
     src: "{{ local_crawler_src_dir }}"
     dest: "{{ path }}"
     delete: yes # delete files in dest on the remote host that are not found in src of localhost.
-    copy_links: yes
+    copy_links: no
