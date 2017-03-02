@@ -15,4 +15,7 @@ apt_dependencies:
   - tmux
   - vim
 
+role_apt_dependencies:
+  - rsync
+
 path: "{{ dirpath }}/{{ dirname }}" # Path where the crawler will live
