@@ -1,11 +1,12 @@
 ---
 # tasks file for ansible-tor-browser-crawler
+- include: install-apt-deps.yml
+
 - include: sync-crawler-dir.yml
   when: local_crawler_src_dir is defined
 - include: clone-repository.yml
   when: local_crawler_src_dir is not defined
 
-- include: install-apt-deps.yml
 - include: install-python-deps.yml
 - include: set-user-capture-abilities.yml
 - include: disable-background-networking.yml
