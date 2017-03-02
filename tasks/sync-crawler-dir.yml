@@ -1,6 +1,6 @@
 - name: Synchronize local directory with the Tor Browser Crawler
   synchronize:
-    src: "{{ local_crawler_src_dir }}"
-    dest: "{{ path }}"
+    src: "{{ crawler_local_src_dir }}"
+    dest: "{{ crawler_path }}"
     delete: yes # delete files in dest on the remote host that are not found in src of localhost.
     copy_links: no

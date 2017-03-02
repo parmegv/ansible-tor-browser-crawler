@@ -5,7 +5,7 @@
     name: "{{ item }}"
     state: latest
     update_cache: yes
-  with_items: "{{ apt_dependencies }}"
+  with_items: "{{ crawler_apt_dependencies }}"
 
 - name: Install role apt dependencies
   become: yes
@@ -13,4 +13,4 @@
     name: "{{ item }}"
     state: latest
     update_cache: yes
-  with_items: "{{ role_apt_dependencies }}"
+  with_items: "{{ crawler_role_apt_dependencies }}"
