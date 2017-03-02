@@ -12,3 +12,5 @@
 - include: disable-background-networking.yml
 
 - include: source-virtualenvwrapper.yml
+
+- include: move-tor-browser-bundle.yml

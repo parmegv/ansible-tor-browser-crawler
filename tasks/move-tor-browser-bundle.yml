@@ -1,0 +1,2 @@
+- name: Move previously downloaded Tor Browser Bundle to the Crawler
+  command: mv {{ tbb_path }} {{ crawler_path }}
