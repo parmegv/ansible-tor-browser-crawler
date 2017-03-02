@@ -14,4 +14,4 @@ galaxy_info:
 
 dependencies:
   - role: parmegv.ansible-swapon
-  - { role: parmegv.ansible-tor-browser-bundle, dirpath: "{{ path }}" }
+  - { role: parmegv.ansible-tor-browser-bundle, tbb_dirpath: "{{ crawler_dirpath }}" }
