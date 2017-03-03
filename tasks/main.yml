@@ -10,7 +10,8 @@
 - include: install-python-deps.yml
 - include: set-user-capture-abilities.yml
 - include: disable-background-networking.yml
+- include: set-mtu-and-offloads.yml
 
-- include: source-virtualenvwrapper.yml
+- include: source-virtualenvwrapper.ym
 
 - include: move-tor-browser-bundle.yml
