@@ -6,6 +6,7 @@ crawler_apt_dependencies:
   - git #tbselenium depends
   - tcpdump
   - wireshark
+  - tshark
   - xvfb
   - tree
   - python-dev # psutil depends
