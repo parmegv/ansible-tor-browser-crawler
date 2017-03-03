@@ -4,6 +4,7 @@ crawler_apt_dependencies:
   - python2.7
   - gcc
   - git #tbselenium depends
+  - ethtool
   - tcpdump
   - wireshark
   - tshark
