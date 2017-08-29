@@ -6,3 +6,10 @@
 - name: Enabling non-root wireshark 2/2 (reconfiguring wireshark-common package)
   become: yes
   command: dpkg-reconfigure -f noninteractive wireshark-common
+
+- name: Add user to wireshark group
+  become: yes
+  user:
+    name: "{{ ansible_env.USER }}"
+    groups: "wireshark"
+    append: yes
