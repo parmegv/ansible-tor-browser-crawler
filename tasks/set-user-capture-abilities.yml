@@ -1,14 +1,8 @@
 ---
-- name: Set user capture abilities.
+- name: Enabling non-root wireshark 1/2 (Set debconf)
   become: yes
-  capabilities:
-    path: /usr/bin/dumpcap
-    capability: cap_net_raw+eip
-    state: present
-    
-- name: Set user capture abilities.
+  debconf: name='wireshark-common' question='wireshark-common/install-setuid' value='true' vtype='boolean'
+
+- name: Enabling non-root wireshark 2/2 (reconfiguring wireshark-common package)
   become: yes
-  capabilities:
-    path: /usr/bin/dumpcap
-    capability: cap_net_admin+eip
-    state: present
+  command: dpkg-reconfigure -f noninteractive wireshark-common
